@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 
 import { AuthUser } from "../context/AuthContext";
+import { useAuth } from "../context/useAuth";
 
 interface SidebarProps {
   activeModule: string;
@@ -23,6 +24,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   onModuleChange,
   user,
 }) => {
+  const { logout } = useAuth();
   // Example: Only admin/manager can see Reports and Financial
   const menuItems = [
     { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
@@ -78,6 +80,12 @@ const Sidebar: React.FC<SidebarProps> = ({
         <div>
           Role: <span className="font-semibold">{user.role}</span>
         </div>
+        <button
+          onClick={logout}
+          className="mt-2 w-full bg-red-100 text-red-700 py-1 rounded hover:bg-red-200 text-xs font-semibold"
+        >
+          Logout
+        </button>
       </div>
     </div>
   );
