@@ -7,6 +7,10 @@ import Customers from "./components/Customers";
 import Suppliers from "./components/Suppliers";
 import Reports from "./components/Reports";
 import Financial from "./components/Financial";
+import PurchaseOrdersDashboard from "./components/PurchaseOrdersDashboard";
+import SupplierPaymentsDashboard from "./components/SupplierPaymentsDashboard";
+import ReturnsDashboard from "./components/ReturnsDashboard";
+import SupplierStatementsDashboard from "./components/SupplierStatementsDashboard";
 import Login from "./components/Login";
 import { DataProvider } from "./context/DataContext";
 // Update the import path to the correct AuthContext file
@@ -37,6 +41,14 @@ function AppContent() {
         return <Reports />;
       case "financial":
         return <Financial />;
+      case "purchase_orders":
+        return <PurchaseOrdersDashboard />;
+      case "supplier_payments":
+        return <SupplierPaymentsDashboard />;
+      case "returns":
+        return <ReturnsDashboard />;
+      case "supplier_statements":
+        return <SupplierStatementsDashboard />;
       default:
         return <Dashboard />;
     }

@@ -8,6 +8,7 @@ import {
   FileText,
   Calculator,
   Store,
+  DollarSign,
 } from "lucide-react";
 
 import { AuthUser } from "../context/AuthContext";
@@ -36,6 +37,18 @@ const Sidebar: React.FC<SidebarProps> = ({
       ? [
           { id: "reports", label: "Reports", icon: FileText },
           { id: "financial", label: "Financial", icon: Calculator },
+          { id: "purchase_orders", label: "Purchase Orders", icon: Package },
+          {
+            id: "supplier_payments",
+            label: "Supplier Payments",
+            icon: DollarSign,
+          },
+          { id: "returns", label: "Returns to Suppliers", icon: Truck },
+          {
+            id: "supplier_statements",
+            label: "Supplier Statements",
+            icon: FileText,
+          },
         ]
       : []),
   ];

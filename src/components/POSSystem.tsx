@@ -7,13 +7,12 @@ import {
   Plus,
   Minus,
   Trash2,
-  CreditCard,
   DollarSign,
   Printer,
   X,
   ShoppingCart,
 } from "lucide-react";
-import { Product, Transaction, TransactionItem } from "../types";
+import { Product, Transaction, TransactionItem } from "../types/index";
 
 const POSSystem: React.FC = () => {
   const { products, customers, addTransaction } = useData();
